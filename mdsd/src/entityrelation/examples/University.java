@@ -48,7 +48,7 @@ public class University extends EntityRelationInternalDSL{
 		  entity("Teacher").
 		  entity("Course").
 		    attribute("title", "String").
-		  inheritance("Persona", "Student").
+		  inheritance("Person", "Student").
 		  relation("Inheritance", "Person", "Teacher").
 		  relation("1-1", "Course", "Teacher").
 		  relation("Many-Many", "Course", "Student") ;
