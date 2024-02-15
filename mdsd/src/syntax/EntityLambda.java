@@ -27,13 +27,13 @@ public class EntityLambda {
 	
 	private IBuilder builder;
 	private interface IBuilder {
-		void system(String name, Consumer<IEntityBuilder> f);
+		void system(String name, Consumer<ISystem> f);
 	}
-	private interface IEntityBuilder {
-		void entity(String name, Consumer<IEntityMemberBuilder> f);
+	private interface ISystem {
+		void entity(String name, Consumer<IEntity> f);
 		void entity(String name);
 	}
-	private interface IEntityMemberBuilder {
+	private interface IEntity{
 		void attribute(String name, String type);	
 	}
 }
